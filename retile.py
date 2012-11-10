@@ -47,7 +47,6 @@ def retile(srcfile, destfile, tilesize, destsize):
 	destp = Point(0,0) # dest rectangle point (upper left)
 	while srcp.y < src.size[1] - tilesize[1]:
 		box = (srcp.x, srcp.y, srcp.x + tilesize[0], srcp.y + tilesize[1])
-		pprint(box)
 		tile = src.crop(box)
 		dest.paste(tile, (destp.x, destp.y))
 		srcp = next_point(srcp, tilesize, src.size)
